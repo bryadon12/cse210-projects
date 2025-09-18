@@ -7,19 +7,19 @@ class Program
     {
         Console.WriteLine("Enter the magic number! (1-100)");
         int magicNumber = int.Parse(Console.ReadLine());
-        Console.WriteLine("Guess the Magic Number!");
-        int guess = int.Parse(Console.ReadLine());
-        if (guess == magicNumber)
+        int guess;
+        do
         {
-            Console.WriteLine("You Guessed It!!!");
-        }
-        else if (guess < magicNumber)
-        {
-            Console.WriteLine("Too Small!");
-        }
-        else
-        {
-            Console.WriteLine("Too Big");
-        }
+            Console.WriteLine("Guess the Magic Number!");
+            guess = int.Parse(Console.ReadLine());
+            if (guess < magicNumber)
+            {
+                Console.WriteLine("Too Small!");
+            }
+            else if (guess > magicNumber)
+            {
+                Console.WriteLine("Too Big");
+            }
+        } while (guess != magicNumber);
     }
 }
