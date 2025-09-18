@@ -5,8 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Enter the magic number! (1-100)");
-        int magicNumber = int.Parse(Console.ReadLine());
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 11);
         int guess;
         do
         {
