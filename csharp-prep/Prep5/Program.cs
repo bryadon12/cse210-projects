@@ -11,6 +11,7 @@ class Program
         int number = int.Parse(Console.ReadLine());
         Console.WriteLine("Please enter the year you were born");
         int year = int.Parse(Console.ReadLine());
-
+        Console.WriteLine($"Your number squared is {number * number}");
+        Console.WriteLine($"You turn {2025 - year} this year");
     }
 }
