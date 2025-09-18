@@ -8,10 +8,7 @@ class Program
         Console.WriteLine("Please enter a grade (0-100)");
         int grade = int.Parse(Console.ReadLine());
         bool pass = false;
-        if (grade >= 70)
-        {
-            pass = true;
-        }
+        
         if (grade < 60)
         {
             letterGrade = "F";
@@ -33,7 +30,7 @@ class Program
             letterGrade = "A";
         }
         Console.WriteLine(letterGrade);
-        if (pass)
+        if (letterGrade == "A" || letterGrade == "B" || letterGrade == "C")
         {
             Console.WriteLine("You Passed, Congradulations!");
         }
