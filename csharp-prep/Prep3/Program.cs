@@ -21,5 +21,6 @@ class Program
                 Console.WriteLine("Too Big");
             }
         } while (guess != magicNumber);
+        Console.WriteLine("You Guessed It!!!");
     }
 }
