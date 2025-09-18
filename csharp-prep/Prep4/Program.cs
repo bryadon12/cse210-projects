@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 class Program
 {
@@ -6,12 +7,17 @@ class Program
     {
         List<int> numbers = new List<int>();
         int number;
+        int sum = 0;
         do
         {
             Console.WriteLine("Enter Nmber: ");
             number = int.Parse(Console.ReadLine());
             numbers.Add(number);
         } while (number != 0);
-        Console.WriteLine("Hello Prep4 World!");
+        foreach (int value in numbers)
+        {
+            sum += value;
+        }
+        Console.WriteLine($"The sum is {sum}");
     }
 }
