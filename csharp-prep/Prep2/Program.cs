@@ -8,7 +8,7 @@ class Program
         Console.WriteLine("Please enter a grade (0-100)");
         int grade = int.Parse(Console.ReadLine());
         bool pass = false;
-        if (grade <= 70)
+        if (grade >= 70)
         {
             pass = true;
         }
