@@ -16,14 +16,16 @@ class Program
         job2._yearStart = 2010;
         job2._yearEnd = 2015;
 
-        job1.Display();
-        job2.Display();
+        // job1.Display();
+        // job2.Display();
 
         Resume resume = new Resume();
+        resume._name = "Braydon Tolman";
         resume._jobs.Add(job1);
         resume._jobs.Add(job2);
 
-        Console.WriteLine(resume._jobs[0]);
-        Console.WriteLine(resume._jobs[1]);
+        Console.WriteLine(resume._name);
+        resume._jobs[0].Display();
+        resume._jobs[1].Display();
     }
 }
