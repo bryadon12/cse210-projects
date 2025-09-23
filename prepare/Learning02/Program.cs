@@ -15,5 +15,8 @@ class Program
         job2._jobTitle = "Software Engineer";
         job2._yearStart = 2010;
         job2._yearEnd = 2015;
+
+        Console.WriteLine(job1._company);
+        Console.WriteLine(job2._company);
     }
 }
