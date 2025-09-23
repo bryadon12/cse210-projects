@@ -1,8 +1,8 @@
 public class Job
 {
-    string _company;
-    string _jobTitle;
-    int _yearStart;
-    int _yearEnd;
+    public string _company;
+    public string _jobTitle;
+    public int _yearStart;
+    public int _yearEnd;
 
 }
