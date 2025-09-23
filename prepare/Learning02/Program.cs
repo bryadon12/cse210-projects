@@ -24,8 +24,10 @@ class Program
         resume._jobs.Add(job1);
         resume._jobs.Add(job2);
 
-        Console.WriteLine(resume._name);
-        resume._jobs[0].Display();
-        resume._jobs[1].Display();
+        // Console.WriteLine(resume._name);
+        // resume._jobs[0].Display();
+        // resume._jobs[1].Display();
+
+        resume.Display();
     }
 }
