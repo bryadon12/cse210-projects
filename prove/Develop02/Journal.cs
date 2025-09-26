@@ -1,5 +1,5 @@
 public class Journal
 {
-    List<Entry> _journal = new List<Entry>();
+    public List<Entry> _journal = new List<Entry>();
 
 }

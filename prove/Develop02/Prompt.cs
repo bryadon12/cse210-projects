@@ -1,7 +1,9 @@
 public class Prompt
 {
-    private List<string> _prompts = new List<string>();
-    private int currentPrompt = 0;
+    public string[] _prompts;
+    public int currentPrompt = 0;
+
+    public string filename = "prompts.txt";
     public void getPrompt()
     {
         Console.WriteLine(_prompts[currentPrompt]);
@@ -20,8 +22,9 @@ public class Prompt
         }
     }
 
-    public void readPrompts(string fileName)
+    public void readPrompts(string filename)
     {
-
+        String[] prompts = System.IO.File.ReadAllLines(filename);
+        _prompts = prompts;
     }
 }
