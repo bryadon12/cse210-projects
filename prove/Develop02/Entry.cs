@@ -8,6 +8,6 @@ public class Entry
 
     public void printEntry(string _date, string _response, Prompt _prompt)
     {
-        
+        Console.WriteLine($"{_prompt}: {_response}({_date})");
     }
 }
