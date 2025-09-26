@@ -14,7 +14,7 @@ public class Menu
 
     public void writeEntry()
     {
-
+        
     }
 
     public void displayJournal(Journal journal)
