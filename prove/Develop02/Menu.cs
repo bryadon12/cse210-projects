@@ -39,12 +39,12 @@ public class Menu
 
     public void displayJournal()
     {
-        
+
     }
 
     public void saveJournal()
     {
-
+        
     }
 
     public void loadJournal()

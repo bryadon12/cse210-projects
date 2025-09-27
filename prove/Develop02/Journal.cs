@@ -17,6 +17,5 @@ public class Journal
             foreach (Entry entry in _journal)
             outputFile.WriteLine(entry.getEntry());
         }
-
     }
 }
