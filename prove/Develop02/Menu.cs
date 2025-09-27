@@ -1,6 +1,6 @@
 public class Menu
 {
-    public void displayMenu()
+    public void openMenu()
     {
         Console.WriteLine("1. Write New Entry\n2. Display Journal\n3. Save Journal\n4. Load Journal\n(Enter 1-4)");
         readMenu();
@@ -8,18 +8,38 @@ public class Menu
 
     public void readMenu()
     {
-        string option = Console.ReadLine();
-
+        int option = int.Parse(Console.ReadLine());
+        if (option == 1)
+        {
+            int promptNum = 1;
+            writeEntry(promptNum);
+        }
+        else if (option == 2)
+        {
+            displayJournal();
+        }
+        else if (option == 3)
+        {
+            saveJournal();
+        }
+        else if (option == 4)
+        {
+            loadJournal();
+        }
+        else
+        {
+            return;
+        }
     }
 
-    public void writeEntry()
+    public void writeEntry(int promptNum)
+    {
+        Entry entry = new Entry();
+    }
+
+    public void displayJournal()
     {
         
-    }
-
-    public void displayJournal(Journal journal)
-    {
-
     }
 
     public void saveJournal()

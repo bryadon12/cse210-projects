@@ -9,7 +9,7 @@ class Program
         Menu menu = new Menu();
         String[] prompts = System.IO.File.ReadAllLines(filename);
 
-        menu.displayMenu();
+        menu.openMenu();
         
     }
 }

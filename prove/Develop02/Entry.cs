@@ -6,8 +6,8 @@ public class Entry
     public string _response;
     public Prompt _prompt;
 
-    public void printEntry(string _date, string _response, Prompt _prompt)
+    public string getEntry()
     {
-        Console.WriteLine($"{_prompt}: {_response}({_date})");
+        return $"{_prompt}: {_response}({_date})";
     }
 }
