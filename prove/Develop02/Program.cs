@@ -7,14 +7,13 @@ class Program
         string filename = "prompts.txt";
         Journal journal = new Journal();
         Menu menu = new Menu();
-        String[] prompts = System.IO.File.ReadAllLines(filename);
 
         menu.openMenu();
         int option = int.Parse(menu.selectOption());
         
                 if (option == 1)
             {
-                writeEntry(journal);
+                journal.addEntry(writeEntry(journal));
             }
             else if (option == 2)
             {
@@ -34,11 +33,15 @@ class Program
             }
     }
 
-    public static void writeEntry(Journal journal)
+    public static Entry writeEntry(Journal journal)
     {
         Entry entry = new Entry();
-        journal.getPromptNumber();
-
+        entry._prompt = journal.getPrompt();
+        Console.WriteLine(entry._prompt);
+        entry._response = Console.ReadLine();
+        Console.WriteLine("Please Enter Today's Date: ");
+        entry._date = Console.ReadLine();
+        return entry;
     }
 
     public static void displayJournal()
