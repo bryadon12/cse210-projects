@@ -14,7 +14,7 @@ class Program
         
                 if (option == 1)
             {
-                writeEntry(journal.getPromptNumber());
+                writeEntry(journal);
             }
             else if (option == 2)
             {

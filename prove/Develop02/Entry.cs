@@ -4,7 +4,7 @@ public class Entry
 {
     public string _date;
     public string _response;
-    public Prompt _prompt;
+    public string _prompt;
 
     public string getEntry()
     {
