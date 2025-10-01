@@ -74,7 +74,6 @@ class Program
             string response = parts[0];
             string date = parts[1];
             Entry entry = new Entry(date, response, prompt);
-
         }
     }
 }
