@@ -1,20 +1,20 @@
 public class Fraction
 {
-    private float _numerator;
-    private float _denominator;
+    private int _numerator;
+    private int _denominator;
 
     public Fraction()
     {
 
     }
 
-    public Fraction(float wholeNumber)
+    public Fraction(int wholeNumber)
     {
         _numerator = wholeNumber;
         _denominator = 1;
     }
 
-    public Fraction(float numerator, float denominator)
+    public Fraction(int numerator, int denominator)
     {
         _numerator = numerator;
         _denominator = denominator;
