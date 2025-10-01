@@ -20,11 +20,6 @@ public class Journal
         }
     }
 
-    // public int getPromptNumber()
-    // {
-    //     return _promptNumber;
-    // }
-
     public void readJournal()
     {
 
@@ -42,7 +37,8 @@ public class Journal
         {
             readPrompts();
         }
-        return _prompts[_promptNumber];
+        string prompt = _prompts[_promptNumber];
+        return prompt;
     }
         public void readPrompts()
     {

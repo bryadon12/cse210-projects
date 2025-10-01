@@ -17,7 +17,7 @@ class Program
             }
             else if (option == 2)
             {
-                displayJournal();
+                displayJournal(journal);
             }
             else if (option == 3)
             {
@@ -44,9 +44,12 @@ class Program
         return entry;
     }
 
-    public static void displayJournal()
+    public static void displayJournal(Journal journal)
     {
-
+        foreach (Entry entry in journal.getJournal())
+        {
+            Console.WriteLine(entry.getEntry());
+        }
     }
 
     public static void saveJournal(Journal journal, string filename)
