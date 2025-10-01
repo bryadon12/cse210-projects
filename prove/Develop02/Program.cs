@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string filename = "prompts.txt";
+        string filename = "journal.txt";
         Journal journal = new Journal();
         Menu menu = new Menu();
         do
