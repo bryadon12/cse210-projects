@@ -1,6 +1,4 @@
-using System;
-using System.IO.Enumeration;
-
+using System.IO; 
 class Program
 {
     static void Main(string[] args)
@@ -12,7 +10,7 @@ class Program
         {
             menu.openMenu();
             int option = int.Parse(menu.selectOption());
-
+            
             if (option == 1)
             {
                 journal.addEntry(writeEntry(journal));
@@ -33,17 +31,17 @@ class Program
             {
                 return;
             }
-        } while (1==1);
+        } while (1 == 1);
     }
 
     public static Entry writeEntry(Journal journal)
     {
-        Entry entry = new Entry();
-        entry._prompt = journal.getPrompt();
-        Console.WriteLine(entry._prompt);
-        entry._response = Console.ReadLine();
+        string prompt = journal.getPrompt();
+        Console.WriteLine(prompt);
+        string response = Console.ReadLine();
         Console.WriteLine("Please Enter Today's Date: ");
-        entry._date = Console.ReadLine();
+        string date = Console.ReadLine();
+        Entry entry = new Entry(date, response, prompt);
         return entry;
     }
 
@@ -67,15 +65,16 @@ class Program
     public static void loadJournal(Journal journal, string filename)
     {
         string[] lines = System.IO.File.ReadAllLines(filename);
-        Entry entry = new Entry();
 
         foreach (string line in lines)
         {
             string[] parts = line.Split(":");
-            entry._prompt = parts[0];
+            string prompt = parts[0];
             parts = parts[1].Split("(");
-            entry._response = parts[0];
-            entry._date = parts[1];
+            string response = parts[0];
+            string date = parts[1];
+            Entry entry = new Entry(date, response, prompt);
+
         }
     }
 }
