@@ -1,31 +1,31 @@
 public class Fraction
 {
-    private int _numerator;
-    private int _denominator;
+    private float _numerator;
+    private float _denominator;
 
     public Fraction()
     {
 
     }
 
-    public Fraction(int wholeNumber)
+    public Fraction(float wholeNumber)
     {
         _numerator = wholeNumber;
         _denominator = 1;
     }
 
-    public Fraction(int numerator, int denominator)
+    public Fraction(float numerator, float denominator)
     {
         _numerator = numerator;
         _denominator = denominator;
     }
 
-    public int getNumerator()
+    public float getNumerator()
     {
         return _numerator;
     }
 
-        public int getDenominator()
+    public float getDenominator()
     {
         return _denominator;
     }
