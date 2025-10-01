@@ -1,4 +1,5 @@
 using System;
+using System.IO.Enumeration;
 
 class Program
 {
@@ -7,11 +8,12 @@ class Program
         string filename = "prompts.txt";
         Journal journal = new Journal();
         Menu menu = new Menu();
+        do
+        {
+            menu.openMenu();
+            int option = int.Parse(menu.selectOption());
 
-        menu.openMenu();
-        int option = int.Parse(menu.selectOption());
-        
-                if (option == 1)
+            if (option == 1)
             {
                 journal.addEntry(writeEntry(journal));
             }
@@ -25,12 +27,13 @@ class Program
             }
             else if (option == 4)
             {
-                loadJournal();
+                loadJournal(journal, filename);
             }
             else
             {
                 return;
             }
+        } while (1==1);
     }
 
     public static Entry writeEntry(Journal journal)
@@ -54,15 +57,25 @@ class Program
 
     public static void saveJournal(Journal journal, string filename)
     {
-                using (StreamWriter outputFile = new StreamWriter(filename))
+        using (StreamWriter outputFile = new StreamWriter(filename))
         {
             foreach (Entry entry in journal.getJournal())
-            outputFile.WriteLine(entry.getEntry());
+                outputFile.WriteLine(entry.getEntry());
         }
     }
 
-    public static void loadJournal()
+    public static void loadJournal(Journal journal, string filename)
     {
+        string[] lines = System.IO.File.ReadAllLines(filename);
+        Entry entry = new Entry();
 
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(":");
+            entry._prompt = parts[0];
+            parts = parts[1].Split("(");
+            entry._response = parts[0];
+            entry._date = parts[1];
+        }
     }
 }
