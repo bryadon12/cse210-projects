@@ -6,8 +6,6 @@ public class Journal
     public string _filename = "journal.txt";
     public string _promptFile = "prompts.txt";
 
-    public string[] _prompts;
-
     public int _promptNumber = 0;
 
     public void addEntry(Entry entry)
@@ -32,17 +30,8 @@ public class Journal
 
     public string getPrompt()
     {
-        
-        if (_prompts.Length == 0)
-        {
-            readPrompts();
-        }
-        string prompt = _prompts[_promptNumber];
+        string[] prompts = System.IO.File.ReadAllLines(_promptFile);
+        string prompt = prompts[_promptNumber];
         return prompt;
     }
-        public void readPrompts()
-    {
-        _prompts = System.IO.File.ReadAllLines(_promptFile);
-    }
-
 }
