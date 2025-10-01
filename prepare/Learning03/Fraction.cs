@@ -48,6 +48,6 @@ public class Fraction
 
     public void getDecimalValue()
     {
-        Console.WriteLine(_numerator / _denominator);
+        Console.WriteLine((double)_numerator / _denominator);
     }
 }
