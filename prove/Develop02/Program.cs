@@ -6,6 +6,6 @@ class Program
 
         Journal journal = new Journal();
         Menu menu = new Menu(journal);
-        menu.openMenu();
+        menu.openMenu(); 
     }
 }
