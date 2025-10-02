@@ -13,4 +13,16 @@ public class Word
     {
         _showing = false;
     }
+
+    public string getWord()
+    {
+        if (_showing)
+        {
+            return _word;
+        }
+        else
+        {
+            return new string('_', _word.Length);
+        }
+    }
 }

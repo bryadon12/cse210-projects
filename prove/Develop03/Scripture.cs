@@ -12,5 +12,13 @@ public class Scripture
         _scripture = scripture;
     }
 
+    public void showScripture()
+    {
+        foreach (Word word in _scripture)
+        {
+            
+        }
+    }
+
 
 }

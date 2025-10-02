@@ -14,8 +14,6 @@ class Program
         }
         Scripture scripture = new Scripture(reference, scriptureWords);
 
-
-
         Console.WriteLine("Hello! Press enter to start memorizing a scripter verse. Type \"exit\" to quit");
 
     }
