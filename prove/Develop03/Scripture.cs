@@ -17,10 +17,10 @@ public class Scripture
 
     public void ShowScripture()
     {
+    Console.Clear();
         foreach (Word word in _scripture)
         {
-            Console.Clear();
-            Console.WriteLine(word.GetWord());
+            Console.Write(word.GetWord());
         }
     }
     public bool HideWords()
