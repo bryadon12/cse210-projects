@@ -14,7 +14,7 @@ public class Word
         _showing = false;
     }
 
-    public string getWord()
+    public string GetWord()
     {
         if (_showing)
         {
@@ -24,5 +24,10 @@ public class Word
         {
             return new string('_', _word.Length);
         }
+    }
+
+    public bool IsShowing()
+    {
+        return _showing;
     }
 }
