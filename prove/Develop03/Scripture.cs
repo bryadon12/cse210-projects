@@ -19,7 +19,8 @@ public class Scripture
     {
         foreach (Word word in _scripture)
         {
-            word.GetWord();
+            Console.Clear();
+            Console.WriteLine(word.GetWord());
         }
     }
     public bool HideWords()
