@@ -10,10 +10,10 @@ class Program
         {
             menu.openMenu();
             int option = int.Parse(menu.selectOption());
-            
+
             if (option == 1)
             {
-                journal.addEntry(writeEntry(journal));
+                journal.addEntry(writeEntry(journal)); 
             }
             else if (option == 2)
             {
@@ -65,7 +65,6 @@ class Program
     public static void loadJournal(Journal journal, string filename)
     {
         string[] lines = System.IO.File.ReadAllLines(filename);
-
         foreach (string line in lines)
         {
             string[] parts = line.Split(":");
@@ -73,7 +72,7 @@ class Program
             parts = parts[1].Split("(");
             string response = parts[0];
             string date = parts[1];
-            Entry entry = new Entry(date, response, prompt);
+            journal.addEntry(new Entry(date, response, prompt));
         }
     }
 }
