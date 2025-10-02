@@ -20,4 +20,17 @@ public class Reference
         _verseStart = verseStart;
         _verseEnd = verseEnd;
     }
+
+    public void printReference()
+    {
+        Console.Write($"{_book} {_chapter}:{_verseStart}");
+        if (_verseStart != _verseEnd)
+        {
+            Console.WriteLine($"-{_verseEnd}");
+        }
+        else
+        {
+            Console.WriteLine("");
+        }
+    }
 }

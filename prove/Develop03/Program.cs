@@ -28,6 +28,9 @@ class Program
                 done = true;
             }
         } while (!done);
-
+        scripture.ShowScripture();
+        Console.ReadLine();
+        Console.Clear();
+        Console.WriteLine("You did it!!!");
     }
 }

@@ -5,7 +5,8 @@ public class Fraction
 
     public Fraction()
     {
-
+        setNumerator();
+        setDenominator();
     }
 
     public Fraction(int wholeNumber)

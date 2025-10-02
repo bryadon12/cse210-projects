@@ -17,7 +17,8 @@ public class Scripture
 
     public void ShowScripture()
     {
-    Console.Clear();
+        Console.Clear();
+        _reference.printReference();
         foreach (Word word in _scripture)
         {
             Console.Write($"{word.GetWord()} ");
@@ -25,25 +26,17 @@ public class Scripture
     }
     public bool HideWords()
     {
-        return HideWords(_scripture, _wordsHidden);
-    }
-
-    public bool HideWords(List<Word> scripture, int wordsHidden)
-    {
+        int startingHidden = _wordsHidden;
         do
         {
-            int i = _random.Next(0, scripture.Count);
-            if (scripture[i].IsShowing())
+            int i = _random.Next(0, _scripture.Count);
+            if (_scripture[i].IsShowing())
             {
-                scripture[i].HideWord();
-                wordsHidden++;
-            }
-            else
-            {
-                continue;
+                _scripture[i].HideWord();
+                _wordsHidden++;
             }
         }
-        while ((wordsHidden < _wordsHidden + scripture.Count / 5) || (wordsHidden == scripture.Count));
-        return (wordsHidden == scripture.Count);
+        while ((_wordsHidden < startingHidden + (_scripture.Count / 5)) && (_wordsHidden < _scripture.Count));
+        return (_wordsHidden == _scripture.Count);
     }
 }
