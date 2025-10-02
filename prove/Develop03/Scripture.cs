@@ -12,13 +12,11 @@ public class Scripture
         _scripture = scripture;
     }
 
-    public void showScripture()
+    public void ShowScripture()
     {
         foreach (Word word in _scripture)
         {
-            
+            word.getWord();
         }
     }
-
-
 }
