@@ -20,7 +20,7 @@ public class Scripture
     Console.Clear();
         foreach (Word word in _scripture)
         {
-            Console.Write(word.GetWord());
+            Console.Write($"{word.GetWord()} ");
         }
     }
     public bool HideWords()
