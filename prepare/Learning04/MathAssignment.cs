@@ -9,7 +9,7 @@ public class MathAssignment : Assignment
         _problems = "";
     }
 
-    public MathAssignment(string studentName, string title, string textbookSelection, string problems) : base(studentName, title)
+    public MathAssignment(string studentName, string topic, string textbookSelection, string problems) : base(studentName, topic)
     {
         _textbookSelection = textbookSelection;
         _problems = problems;
@@ -30,7 +30,7 @@ public class MathAssignment : Assignment
         _problems = problems;
     }
 
-    public string SetProblems()
+    public string getProblems()
     {
         return _problems;
     }

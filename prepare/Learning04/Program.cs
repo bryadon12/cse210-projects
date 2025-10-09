@@ -8,17 +8,33 @@ class Program
         // Console.WriteLine(assignment.GetSummary());
         // assignment.SetName("Braydon");
         // assignment.SetTopic("Inheratence");
-        // Console.WriteLine(assignment.GetSummary());
 
-        MathAssignment mathAssignment = new MathAssignment();
+        Assignment assignment = new Assignment("Braydon", "Inheratence");
+
+        Console.WriteLine(assignment.GetSummary());
+
+        // MathAssignment mathAssignment = new MathAssignment();
+        // Console.WriteLine(mathAssignment.GetHomeworkList());
+
+        // mathAssignment.SetTextbookSelection("Calculus");
+        // mathAssignment.SetProblems("1-12");
+        // mathAssignment.SetName("Braydon");
+        // mathAssignment.SetTopic("Integration");
+
+        MathAssignment mathAssignment = new MathAssignment("Braydon", "Calculus", "CalcBook", "1-11");
+
         Console.WriteLine(mathAssignment.GetHomeworkList());
 
-        mathAssignment.SetTextbookSelection("Calculus");
-        mathAssignment.SetProblems("1-12");
-        mathAssignment.SetName("Braydon");
-        mathAssignment.SetTopic("Integration");
+        // WritingAssignment writingAssignment = new WritingAssignment();
+        // Console.WriteLine(writingAssignment.GetWritingInformation());
 
-        Console.WriteLine(mathAssignment.GetHomeworkList());
+        // writingAssignment.SetTitle("Desk Chairs : Do we need them?");
+        // writingAssignment.SetName("Braydon");
+        // writingAssignment.SetTopic("Essay");
+
+        WritingAssignment writingAssignment = new WritingAssignment("Braydon", "Essay", "Hamburgers...Yummy!");
+
+        Console.WriteLine(writingAssignment.GetWritingInformation());
 
     }
 }
