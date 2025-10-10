@@ -6,7 +6,7 @@ public class Menu
     {
         _options = options;
     }
-    public void OpenMenu()
+    public int OpenMenu()
     {
         int i = 1;
         foreach (string option in _options)
@@ -14,7 +14,7 @@ public class Menu
             Console.WriteLine($"{i}. {option}");
             i++; 
         }   
-        SelectOption();
+        return SelectOption();
     }
 
     public int SelectOption()
