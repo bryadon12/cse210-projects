@@ -24,10 +24,10 @@ public class Activity
 
     public void StartingMessage()
     {
-        Console.WriteLine($"{_activityName}: {_description}\nHow long (in seconds) would you like do this activity? ");
-        _time = int.Parse(Console.ReadLine());
+        Console.WriteLine($"Welcom to the {_activityName} activity.\n\n {_description}\n\nHow long, in seconds, would you like do this activity? ");
+        _time = 5;  //int.Parse(Console.ReadLine());
         Console.WriteLine("Prepare to Begin.");
-        Delay(4);
+        Delay(3);
     }
 
     public void EndingMessage()
@@ -39,16 +39,18 @@ public class Activity
 
     public void Delay(int time)
     {
-        foreach (String position in _spinner)
-        {
-            Console.Write(position);
-            Thread.Sleep(1000);
-            Console.Write("\b \b");
-        }
+        while ()
+            foreach (String position in _spinner)
+            {
+                Console.Write(position);
+                Thread.Sleep(500);
+                Console.Write("\b \b");
+            }
     }
-
-    public int GetTime()
+    
+    public DateTime Timer()
     {
-        return _time;
+        DateTime currentTime = DateTime.Now;
+        return currentTime.AddSeconds(_time);
     }
 }

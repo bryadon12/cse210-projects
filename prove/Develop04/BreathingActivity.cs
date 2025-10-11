@@ -28,10 +28,8 @@ public class BreathingActivity : Activity
     
     public void DoActivity()
     {
-        DateTime currentTime = DateTime.Now;
-        DateTime endTime = currentTime.AddSeconds(GetTime());
-
-        while (DateTime.Now < endTime)
+        DateTime endtime = Timer();
+        while (DateTime.Now < endtime)
         {
             Breath();
         }
