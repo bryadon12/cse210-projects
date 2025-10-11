@@ -6,7 +6,7 @@ class Program
     {
         Menu activityMenu = new Menu(new List<String> {"Breathing", "Reflection", "Listening"});
 
-        int choice = activityMenu.OpenMenu();
+        int choice = 1; //activityMenu.OpenMenu();
 
         if (choice == 1)
         {
@@ -24,7 +24,5 @@ class Program
             activity.EndingMessage();
         }
         
-
-
     }
 }
