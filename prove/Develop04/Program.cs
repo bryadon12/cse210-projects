@@ -10,19 +10,21 @@ class Program
 
         if (choice == 1)
         {
-            BreathingActivity activity = new BreathingActivity("breathing", "in and out");
-            activity.EndingMessage();
+            BreathingActivity activity = new BreathingActivity();
+            Console.Clear();
+            activity.DoActivity();
         }
         else if (choice == 2)
         {
-            ReflectionActivity activity = new ReflectionActivity("reflection", "think about stuff");
-            activity.EndingMessage();
+            ReflectionActivity activity = new ReflectionActivity();
+
         }
         else
         {
-            ListeningActivity activity = new ListeningActivity("listening", "be quite");
-            activity.EndingMessage();
+            ListeningActivity activity = new ListeningActivity();
+
         }
+        
         
     }
 }

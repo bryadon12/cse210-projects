@@ -5,21 +5,29 @@ public class Activity
     private int _time;
     private List<string> _spinner;
 
-    public Activity(string activityName, string description)
+    public Activity()
     {
-        _activityName = activityName;
-        _description = description;
         _spinner = new List<string> { "/", "-", "\\", "|" };
         StartingMessage();
 
     }
 
+    public void SetActivity(string activityName)
+    {
+        _activityName = activityName;
+    }
+
+        public void SetDescription(string description)
+    {
+        _description = description;
+    }
+
     public void StartingMessage()
     {
-        Console.WriteLine($"{_activityName}: {_description}\nHow long would you like do this activity? ");
+        Console.WriteLine($"{_activityName}: {_description}\nHow long (in seconds) would you like do this activity? ");
         _time = int.Parse(Console.ReadLine());
         Console.WriteLine("Prepare to Begin.");
-        Delay(5);
+        Delay(4);
     }
 
     public void EndingMessage()
@@ -36,6 +44,11 @@ public class Activity
             Console.Write(position);
             Thread.Sleep(1000);
             Console.Write("\b \b");
-        }   
+        }
+    }
+
+    public int GetTime()
+    {
+        return _time;
     }
 }
