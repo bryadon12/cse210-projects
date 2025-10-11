@@ -7,22 +7,22 @@ public class BreathingActivity : Activity
         Delay(5);
     }
 
-    public void BreathCount(int time)
-    {
-        for (int i = time; i >= 0; i--)
-        {
-            Thread.Sleep(1000);
-            Console.Write($"\b \b{i}");
-        }
-    }
+    // public void BreathCount(int time)
+    // {
+    //     for (int i = time; i >= 0; i--)
+    //     {
+    //         Thread.Sleep(1000);
+    //         Console.Write($"\b \b{i}");
+    //     }
+    // }
 
     public void Breath()
     {
-        Console.Write("Breathe in:  ");
-        BreathCount(4);
+        Console.Write("Breathe in:   ");
+        CountDown(4);
         Console.WriteLine("\n");
         Console.Write("Breathe out:  ");
-        BreathCount(6);
+        CountDown(6);
         Console.WriteLine("\n");
     }
     

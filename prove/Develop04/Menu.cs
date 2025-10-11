@@ -12,8 +12,9 @@ public class Menu
         foreach (string option in _options)
         {
             Console.WriteLine($"{i}. {option}");
-            i++; 
-        }   
+            i++;
+        }
+        Console.WriteLine("Please select a choice from the menu: ");
         return SelectOption();
     }
 

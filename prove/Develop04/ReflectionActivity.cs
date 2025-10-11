@@ -54,9 +54,15 @@ public class ReflectionActivity : Activity
 
     public void DoActivity()
     {
+        DateTime endtime = Timer();
         Console.WriteLine(GetPrompt());
         Console.WriteLine("\n Press enter when you have thought of an answer.");
-        Console.WriteLine(GetQuestion());
-        Delay(10);
+        Console.ReadLine();
+        while (DateTime.Now < endtime)
+        {
+            Console.WriteLine(GetQuestion());
+            Delay(12);
+        }
+        EndingMessage();
     }
 }
