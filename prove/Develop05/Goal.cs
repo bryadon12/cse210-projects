@@ -1,9 +1,9 @@
-public class Goal
+public abstract class Goal
 {
     private int _points;
     private string _name;
 
-    public Goal(int points, string name)
+    public Goal(string name, int points)
     {
         _points = points;
         _name = name;
@@ -28,4 +28,7 @@ public class Goal
     {
         _name = name;
     }
+
+    public abstract int DoGoal()
+
 }
