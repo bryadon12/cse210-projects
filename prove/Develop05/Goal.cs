@@ -29,6 +29,6 @@ public abstract class Goal
         _name = name;
     }
 
-    public abstract int DoGoal()
-
+    public abstract int DoGoal();
 }
+
