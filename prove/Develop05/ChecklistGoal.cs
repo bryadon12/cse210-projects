@@ -2,10 +2,11 @@ public class ChecklistGoal : Goal
 {
     private int _bonusPoints;
     private int _remainingEvents;
+    private int _totalEvents;
 
-    public ChecklistGoal(string name, int points, int bonusPoints, int remainingEvents) : base(name, points)
+    public ChecklistGoal() : base()
     {
-        _remainingEvents = remainingEvents;
+        
     }
 
     public override int DoGoal()
@@ -25,5 +26,10 @@ public class ChecklistGoal : Goal
             Console.WriteLine("This Goal is already Completed");
             return 0;
         }
+    }
+
+    public override string GetStatus()
+    {
+        return $"{_totalEvents-_remainingEvents}/{_totalEvents} Completed";
     }
 }

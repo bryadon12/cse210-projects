@@ -3,11 +3,19 @@ public abstract class Goal
     private int _points;
     private string _name;
 
-    public Goal(string name, int points)
+    public Goal()
     {
-        _points = points;
-        _name = name;
+        Console.WriteLine("What would you like to call this goal?");
+        _name = Console.ReadLine();
+        Console.WriteLine("How many points is this goal worth? (Enter a positive whole number)");
+        _points = int.Parse(Console.ReadLine());
+
     }
+    // public Goal(string name, int points)
+    // {
+    //     _points = points;
+    //     _name = name;
+    // }
 
     public int GetPoints()
     {
@@ -30,5 +38,9 @@ public abstract class Goal
     }
 
     public abstract int DoGoal();
+    public virtual string GetStatus()
+    {
+        return "";
+    }
 }
 

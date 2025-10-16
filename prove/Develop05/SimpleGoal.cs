@@ -4,7 +4,7 @@ public class SimpleGoal : Goal
 {
     private bool _complete;
 
-    public SimpleGoal(string name, int points) : base(name, points)
+    public SimpleGoal() : base()
     {
         _complete = false;
     }
@@ -20,6 +20,18 @@ public class SimpleGoal : Goal
         {
             Console.WriteLine("This Goal is already Completed");
             return 0;
+        }
+    }
+
+    public override string GetStatus()
+    {
+        if (_complete)
+        {
+            return "[X]";
+        }
+        else
+        {
+            return "[ ]";
         }
     }
 }
