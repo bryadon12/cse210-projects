@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices.Marshalling;
+using System.Transactions;
 
 class Program
 {
@@ -11,6 +12,7 @@ class Program
         Menu mainMenu = new Menu(new List<String> { "Create Goal", "View Goals", "Complete Goal", "View Points", "Quit" });
         Menu goalMenu = new Menu(new List<string> { "Simple Goal", "Check-List Goal", "Eternal Goal" });
         int choice;
+
         do
         {
             choice = mainMenu.OpenMenu();
@@ -37,11 +39,13 @@ class Program
             }
             else if (choice == 3)
             {
-
+                goals.ListGoals();
+                Console.WriteLine("Enter the number of the goal you have completed.");
+                goals.CompleteGoal(int.Parse(Console.ReadLine()));
             }
             else if (choice == 4)
             {
-
+                Console.WriteLine($"You currently have {points} points ");
             }
         } while (choice != 4);
     }

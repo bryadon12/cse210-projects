@@ -22,4 +22,9 @@ public class GoalList
         Console.WriteLine("Press Enter to return to menu: ");
         Console.ReadLine();
     }
+
+    public void CompleteGoal(int goalNumber)
+    {
+        _goals[goalNumber].DoGoal();
+    }
 }
