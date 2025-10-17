@@ -37,18 +37,22 @@ class Program
             {
                 goals.ListGoals();
                 Console.WriteLine("Press Enter to return to the Menu.");
-                Console.ReadLine(); 
+                Console.ReadLine();
             }
             else if (choice == 3)
             {
                 goals.ListGoals();
                 Console.WriteLine("Enter the number of the goal you have completed.");
-                goals.CompleteGoal(int.Parse(Console.ReadLine()));
+                points += goals.CompleteGoal(int.Parse(Console.ReadLine()));
             }
             else if (choice == 4)
             {
                 Console.WriteLine($"You currently have {points} points ");
             }
-        } while (choice != 4);
+            else
+            {
+                choice = 5;
+            }
+        } while (choice != 5);
     }
 }

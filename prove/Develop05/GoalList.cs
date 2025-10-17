@@ -22,8 +22,8 @@ public class GoalList
         }
     }
 
-    public void CompleteGoal(int goalNumber)
+    public int CompleteGoal(int goalNumber)
     {
-        _goals[goalNumber].DoGoal();
+        return _goals[goalNumber-1].DoGoal();
     }
 }
