@@ -11,11 +11,11 @@ public abstract class Goal
         _points = int.Parse(Console.ReadLine());
 
     }
-    // public Goal(string name, int points)
-    // {
-    //     _points = points;
-    //     _name = name;
-    // }
+    public Goal(string name, int points)
+    {
+        _points = points;
+        _name = name;
+    }
 
     public int GetPoints()
     {
