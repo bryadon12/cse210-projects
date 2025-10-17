@@ -36,6 +36,8 @@ class Program
             else if (choice == 2)
             {
                 goals.ListGoals();
+                Console.WriteLine("Press Enter to return to the Menu.");
+                Console.ReadLine(); 
             }
             else if (choice == 3)
             {

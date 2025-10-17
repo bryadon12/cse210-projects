@@ -18,9 +18,8 @@ public class GoalList
         foreach (Goal item in _goals)
         {
             Console.WriteLine($"{i}. {item.GetName()} {item.GetStatus()}");
+            i++;
         }
-        Console.WriteLine("Press Enter to return to menu: ");
-        Console.ReadLine();
     }
 
     public void CompleteGoal(int goalNumber)

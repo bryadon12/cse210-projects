@@ -6,7 +6,10 @@ public class ChecklistGoal : Goal
 
     public ChecklistGoal() : base()
     {
-        
+        Console.WriteLine("Enter how many steps until you have completed your goal: ");
+        _totalEvents = _remainingEvents = int.Parse(Console.ReadLine());
+        Console.WriteLine("Enter how many bonus points for finishing your goal: ");
+        _bonusPoints = int.Parse(Console.ReadLine());
     }
 
     public override int DoGoal()
