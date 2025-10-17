@@ -48,6 +48,8 @@ class Program
             else if (choice == 4)
             {
                 Console.WriteLine($"You currently have {points} points ");
+                Console.WriteLine("Press Enter to return to the Menu.");
+                Console.ReadLine();
             }
             else
             {
