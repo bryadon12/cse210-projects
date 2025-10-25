@@ -1,6 +1,4 @@
 using System;
-using System.Runtime.InteropServices.Marshalling;
-using System.Transactions;
 
 class Program
 {
@@ -9,7 +7,7 @@ class Program
         GoalList goals = new GoalList();
         int points = 0;
 
-        Menu mainMenu = new Menu(new List<String> { "Create Goal", "View Goals", "Complete Goal", "View Points", "Quit" });
+        Menu mainMenu = new Menu(new List<string> { "Create Goal", "View Goals", "Complete Goal", "View Points", "Quit" });
         Menu goalMenu = new Menu(new List<string> { "Simple Goal", "Check-List Goal", "Eternal Goal" });
         int choice;
 
